@@ -1,0 +1,85 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red255\green255\blue255;
+\red235\green15\blue46;\red213\green20\blue102;\red20\green153\blue108;\red247\green250\blue248;\red247\green250\blue248;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c100000\c100000\c99971;
+\cssrgb\c94685\c16925\c23371;\cssrgb\c87518\c18826\c47306;\cssrgb\c744\c65268\c49801;\cssrgb\c97616\c98401\c97763;\cssrgb\c97616\c98401\c97763;
+}
+\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf0 1.\
+db.people.find()\
+\
+\
+2.\
+db.people.count()\
+\
+\
+3\
+db.people.find(\{state: \'91Arizona\'92\})\
+\
+\
+4.\
+db.people.find(\{state: 'Arizona', gender: 'Male\'92\})\
+\
+\
+5.\
+\
+db.people.find(\{$or: [\{state: \'91Arizona\'92\}, \{state: \'91New Mexico\'92\}]\})\
+\
+\
+6.\
+db.people.find(\{age: \{$lt: 40\}\})\
+\
+\
+7.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.people.\strokec5 find\strokec4 (\{\
+  \strokec6 $and\strokec4 : [\
+    \{ \strokec6 gender\strokec4 : \strokec7 "Female"\strokec4  \},\
+    \{ \strokec6 state\strokec4 : \strokec7 "Florida"\strokec4  \},\
+    \{ \strokec6 age\strokec4 : \{ \strokec6 $gte\strokec4 : \strokec6 40\strokec4 , \strokec6 $lte\strokec4 : \strokec6 45\strokec4  \} \}\
+  ]\
+\})\
+\
+\
+8.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec8 db.people.ding(\{first_name: /^H/\})\
+\
+\
+9.\
+db.people.find(\{ state: "Michigan" \}).sort(\{ first_name: 1 \})\
+\
+\
+\
+10.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \outl0\strokewidth0 db.people.find(\{\
+  $or: [\
+    \{ state: "Virginia" \},\
+    \{ first_name:"Virginia"\}\
+  ]\
+\})\
+\
+\
+11.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \outl0\strokewidth0 \strokec8 db.people.find(\{ age: \{ $lt: 30 \} \}, \{first_name: true, last_name: true \})\
+\
+\
+12.\
+db.people.find(\{ state: "Montana" \}, \{age: false \})\
+\
+\
+13.\
+db.people.find(\{ email: /.edu$/\}, \{email: true \})\
+\
+\
+\
+\
+\
+}
